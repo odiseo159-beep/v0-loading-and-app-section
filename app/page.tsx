@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import {
-  ArrowLeft,
   ExternalLink,
   Copy,
   Check,
@@ -22,7 +21,6 @@ import {
   MonitorPlay,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { NyakoVideo } from "@/components/ui/nyako-video"
 
 const chatMessages = [
@@ -86,7 +84,7 @@ export default function Page() {
     <div 
       className="min-h-screen text-[#6B5344] relative"
       style={{
-        backgroundImage: `url('/images/background-room.jpg')`,
+        backgroundImage: `url('/images/backvtber.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
@@ -96,18 +94,7 @@ export default function Page() {
       <div className="absolute inset-0 bg-[#FFF8E7]/20" />
       
       {/* Content */}
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="p-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-[#8B7355] hover:text-[#6B5344] transition-colors text-lg bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-[#E8D4A8] shadow-md"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span className="font-bold">BACK</span>
-          </Link>
-        </div>
-
+      <div className="relative z-10 pt-6">
         {/* Main Content */}
         <div className="px-6 pb-10 max-w-[1600px] mx-auto">
           <div className="flex gap-6">
@@ -334,13 +321,6 @@ export default function Page() {
                       {showMore ? "Show Less" : "Show More"}
                     </button>
                   </div>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFF8E7] border-2 border-[#F5ECD7] rounded-full hover:border-[#D4A853] transition-colors text-base text-[#6B5344] shadow-sm"
-                  >
-                    <span>https://nyako.ai</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
                 </div>
 
                 {/* Column 2: Contract, Wallet & Stats */}
