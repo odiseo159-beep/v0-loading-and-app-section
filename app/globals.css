@@ -171,7 +171,7 @@
   }
   body {
     @apply text-foreground;
-    background-color: #F3BA2F; /* Changed background to yellow to eliminate black lines */
+    background-color: #FDF6E3; /* Changed background to cream kawaii color */
   }
   .hide-scrollbar {
     scrollbar-width: none;
