@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import LoadingScreen from "@/components/loading-screen"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -55,7 +54,6 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`font-sans antialiased ${_impact.variable} ${_msyi.variable} ${_roboto.variable}`}>
-        <LoadingScreen />
         {children}
         <Analytics />
       </body>

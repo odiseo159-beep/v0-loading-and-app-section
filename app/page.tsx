@@ -59,25 +59,25 @@ export default function Page() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#FDF6E3]">
+      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#FFF8E7]">
         {/* Kawaii loading frame */}
         <div className="relative">
-          <div className="absolute -inset-4 bg-[#C4A574] rounded-[2rem] border-4 border-[#8B7355]" />
-          <div className="absolute -inset-2 bg-[#FDF6E3] rounded-[1.5rem] border-2 border-[#C4A574]" style={{ borderStyle: 'dashed' }} />
-          <div className="relative bg-white px-12 py-8 rounded-2xl border-2 border-[#C4A574] shadow-lg">
+          <div className="absolute -inset-4 bg-[#E8D4A8] rounded-[2rem] border-4 border-[#C9A86C]" />
+          <div className="absolute -inset-2 bg-[#FFF8E7] rounded-[1.5rem] border-2 border-[#E8D4A8]" style={{ borderStyle: 'dashed' }} />
+          <div className="relative bg-white px-12 py-8 rounded-2xl border-2 border-[#E8D4A8] shadow-lg">
             {/* Animated dots */}
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-4 h-4 rounded-full bg-[#E8A4B8] animate-bounce" style={{ animationDelay: '0ms' }} />
-              <div className="w-4 h-4 rounded-full bg-[#F5D89A] animate-bounce" style={{ animationDelay: '150ms' }} />
-              <div className="w-4 h-4 rounded-full bg-[#C4A574] animate-bounce" style={{ animationDelay: '300ms' }} />
+              <div className="w-4 h-4 rounded-full bg-[#F5D89A] animate-bounce" style={{ animationDelay: '0ms' }} />
+              <div className="w-4 h-4 rounded-full bg-[#E8C987] animate-bounce" style={{ animationDelay: '150ms' }} />
+              <div className="w-4 h-4 rounded-full bg-[#C9A86C] animate-bounce" style={{ animationDelay: '300ms' }} />
             </div>
             <h2 className="text-3xl font-bold tracking-wider text-[#8B7355] text-center">Loading...</h2>
           </div>
         </div>
-        {/* Decorative hearts */}
-        <div className="absolute top-1/4 left-1/4 text-[#E8A4B8] text-2xl animate-pulse">&#9829;</div>
-        <div className="absolute top-1/3 right-1/4 text-[#F5D89A] text-xl animate-pulse" style={{ animationDelay: '200ms' }}>&#9829;</div>
-        <div className="absolute bottom-1/3 left-1/3 text-[#C4A574] text-lg animate-pulse" style={{ animationDelay: '400ms' }}>&#9829;</div>
+        {/* Decorative stars */}
+        <div className="absolute top-1/4 left-1/4 text-[#F5D89A] text-2xl animate-pulse">&#10022;</div>
+        <div className="absolute top-1/3 right-1/4 text-[#E8C987] text-xl animate-pulse" style={{ animationDelay: '200ms' }}>&#10022;</div>
+        <div className="absolute bottom-1/3 left-1/3 text-[#C9A86C] text-lg animate-pulse" style={{ animationDelay: '400ms' }}>&#10022;</div>
       </div>
     )
   }
@@ -86,14 +86,14 @@ export default function Page() {
     <div 
       className="min-h-screen text-[#6B5344] relative"
       style={{
-        backgroundImage: `url('/images/14.png')`,
+        backgroundImage: `url('/images/background-room.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
       }}
     >
       {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-[#FDF6E3]/30" />
+      <div className="absolute inset-0 bg-[#FFF8E7]/20" />
       
       {/* Content */}
       <div className="relative z-10">
@@ -101,7 +101,7 @@ export default function Page() {
         <div className="p-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-[#8B7355] hover:text-[#6B5344] transition-colors text-lg bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-[#C4A574] shadow-md"
+            className="inline-flex items-center gap-2 text-[#8B7355] hover:text-[#6B5344] transition-colors text-lg bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-[#E8D4A8] shadow-md"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="font-bold">BACK</span>
@@ -119,15 +119,15 @@ export default function Page() {
               onMouseLeave={() => setShowControls(false)}
             >
               {/* Kawaii frame wrapper */}
-              <div className="absolute -inset-3 bg-[#C4A574] rounded-[2rem] border-4 border-[#8B7355]" />
-              <div className="absolute -inset-1 bg-[#FDF6E3] rounded-[1.5rem] border-2 border-[#C4A574]" 
+              <div className="absolute -inset-3 bg-[#E8D4A8] rounded-[2rem] border-4 border-[#C9A86C]" />
+              <div className="absolute -inset-1 bg-[#FFF8E7] rounded-[1.5rem] border-2 border-[#E8D4A8]" 
                    style={{ 
                      borderStyle: 'dashed',
-                     backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(196, 165, 116, 0.1) 10px, rgba(196, 165, 116, 0.1) 20px)'
+                     backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(232, 212, 168, 0.2) 10px, rgba(232, 212, 168, 0.2) 20px)'
                    }} 
               />
               
-              <div className="relative rounded-2xl overflow-hidden bg-white h-full border-2 border-[#C4A574]">
+              <div className="relative rounded-2xl overflow-hidden bg-white h-full border-2 border-[#E8D4A8]">
                 <iframe
                   src="https://amica-importer--ethshilder.replit.app/"
                   className="w-full h-full border-0"
@@ -137,24 +137,24 @@ export default function Page() {
 
                 <div className="absolute top-4 right-4 flex gap-2 z-10">
                   <button
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FDF6E3]/95 hover:bg-[#FDF6E3] backdrop-blur-sm border-2 border-[#C4A574] transition-colors shadow-md"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF8E7]/95 hover:bg-[#FFF8E7] backdrop-blur-sm border-2 border-[#E8D4A8] transition-colors shadow-md"
                     title="Brain/Thoughts"
                   >
-                    <Brain className="w-5 h-5 text-[#E8A4B8]" />
+                    <Brain className="w-5 h-5 text-[#D4A853]" />
                     <span className="text-[#6B5344] text-sm font-bold">Thoughts</span>
                   </button>
                   <button
-                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FDF6E3]/95 hover:bg-[#FDF6E3] backdrop-blur-sm border-2 border-[#C4A574] transition-colors shadow-md"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFF8E7]/95 hover:bg-[#FFF8E7] backdrop-blur-sm border-2 border-[#E8D4A8] transition-colors shadow-md"
                     title="Watch Media"
                   >
-                    <MonitorPlay className="w-5 h-5 text-[#E8A4B8]" />
+                    <MonitorPlay className="w-5 h-5 text-[#D4A853]" />
                     <span className="text-[#6B5344] text-sm font-bold">Watch Media</span>
                   </button>
                 </div>
 
                 {/* Bottom controls bar */}
                 <div
-                  className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#C4A574]/95 via-[#C4A574]/70 to-transparent p-4 transition-opacity duration-300 ${
+                  className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#E8D4A8]/95 via-[#E8D4A8]/70 to-transparent p-4 transition-opacity duration-300 ${
                     showControls ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -163,17 +163,17 @@ export default function Page() {
                     <div className="flex items-center gap-3">
                       <button
                         onClick={() => setIsPlaying(!isPlaying)}
-                        className="w-10 h-10 rounded-full bg-[#E8A4B8] hover:bg-[#D893A7] flex items-center justify-center transition-colors border-2 border-[#D893A7] shadow-md"
+                        className="w-10 h-10 rounded-full bg-[#F5D89A] hover:bg-[#E8C987] flex items-center justify-center transition-colors border-2 border-[#D4A853] shadow-md"
                       >
                         {isPlaying ? (
-                          <Pause className="w-5 h-5 text-white" />
+                          <Pause className="w-5 h-5 text-[#6B5344]" />
                         ) : (
-                          <Play className="w-5 h-5 text-white ml-0.5" />
+                          <Play className="w-5 h-5 text-[#6B5344] ml-0.5" />
                         )}
                       </button>
                       <button
                         onClick={() => setIsMuted(!isMuted)}
-                        className="w-10 h-10 rounded-full bg-[#FDF6E3] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#C4A574] shadow-md"
+                        className="w-10 h-10 rounded-full bg-[#FFF8E7] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#E8D4A8] shadow-md"
                       >
                         {isMuted ? <VolumeX className="w-5 h-5 text-[#6B5344]" /> : <Volume2 className="w-5 h-5 text-[#6B5344]" />}
                       </button>
@@ -182,25 +182,25 @@ export default function Page() {
                     {/* Right Controls */}
                     <div className="flex items-center gap-2">
                       <button
-                        className="w-10 h-10 rounded-full bg-[#FDF6E3] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#C4A574] shadow-md"
+                        className="w-10 h-10 rounded-full bg-[#FFF8E7] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#E8D4A8] shadow-md"
                         title="Developer Tools"
                       >
                         <Code className="w-5 h-5 text-[#6B5344]" />
                       </button>
                       <button
-                        className="w-10 h-10 rounded-full bg-[#FDF6E3] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#C4A574] shadow-md"
+                        className="w-10 h-10 rounded-full bg-[#FFF8E7] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#E8D4A8] shadow-md"
                         title="AI Configuration"
                       >
                         <Bot className="w-5 h-5 text-[#6B5344]" />
                       </button>
                       <button
-                        className="w-10 h-10 rounded-full bg-[#FDF6E3] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#C4A574] shadow-md"
+                        className="w-10 h-10 rounded-full bg-[#FFF8E7] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#E8D4A8] shadow-md"
                         title="Settings"
                       >
                         <Settings className="w-5 h-5 text-[#6B5344]" />
                       </button>
                       <button
-                        className="w-10 h-10 rounded-full bg-[#FDF6E3] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#C4A574] shadow-md"
+                        className="w-10 h-10 rounded-full bg-[#FFF8E7] hover:bg-white flex items-center justify-center transition-colors border-2 border-[#E8D4A8] shadow-md"
                         title="Fullscreen"
                       >
                         <Maximize className="w-5 h-5 text-[#6B5344]" />
@@ -217,18 +217,18 @@ export default function Page() {
               style={{ height: "650px" }}
             >
               {/* Kawaii frame wrapper for chat */}
-              <div className="absolute -inset-3 bg-[#C4A574] rounded-[2rem] border-4 border-[#8B7355]" />
-              <div className="absolute -inset-1 bg-[#FDF6E3] rounded-[1.5rem] border-2 border-[#C4A574]" 
+              <div className="absolute -inset-3 bg-[#E8D4A8] rounded-[2rem] border-4 border-[#C9A86C]" />
+              <div className="absolute -inset-1 bg-[#FFF8E7] rounded-[1.5rem] border-2 border-[#E8D4A8]" 
                    style={{ borderStyle: 'dashed' }} 
               />
               
-              <div className="relative rounded-2xl border-2 border-[#C4A574] bg-[#FFFEF9] flex flex-col h-full overflow-hidden shadow-lg">
+              <div className="relative rounded-2xl border-2 border-[#E8D4A8] bg-[#FFFEF9] flex flex-col h-full overflow-hidden shadow-lg">
                 {/* Chat Tabs */}
-                <div className="flex border-b-2 border-[#E8DCC8] bg-[#FDF6E3]">
+                <div className="flex border-b-2 border-[#F5ECD7] bg-[#FFF8E7]">
                   <button
                     onClick={() => setActiveTab("group")}
                     className={`flex-1 py-3 text-sm font-bold transition-colors ${
-                      activeTab === "group" ? "text-[#6B5344] border-b-3 border-[#E8A4B8] bg-white" : "text-[#A89078] hover:text-[#6B5344]"
+                      activeTab === "group" ? "text-[#6B5344] border-b-3 border-[#D4A853] bg-white" : "text-[#A89078] hover:text-[#6B5344]"
                     }`}
                   >
                     Group Chat
@@ -236,7 +236,7 @@ export default function Page() {
                   <button
                     onClick={() => setActiveTab("private")}
                     className={`flex-1 py-3 text-sm font-bold transition-colors flex items-center justify-center gap-1 ${
-                      activeTab === "private" ? "text-[#6B5344] border-b-3 border-[#E8A4B8] bg-white" : "text-[#A89078] hover:text-[#6B5344]"
+                      activeTab === "private" ? "text-[#6B5344] border-b-3 border-[#D4A853] bg-white" : "text-[#A89078] hover:text-[#6B5344]"
                     }`}
                   >
                     Private Chat
@@ -245,19 +245,19 @@ export default function Page() {
                 </div>
 
                 {/* Donation highlights */}
-                <div className="p-3 space-y-2 border-b-2 border-[#E8DCC8] bg-[#FDF6E3]/50">
-                  <div className="flex items-center gap-2 text-sm bg-white/70 px-3 py-2 rounded-full border border-[#E8DCC8]">
-                    <span className="w-6 h-6 rounded-full bg-[#E8A4B8] flex items-center justify-center text-white text-xs font-bold shadow-sm">
+                <div className="p-3 space-y-2 border-b-2 border-[#F5ECD7] bg-[#FFF8E7]/50">
+                  <div className="flex items-center gap-2 text-sm bg-white/70 px-3 py-2 rounded-full border border-[#F5ECD7]">
+                    <span className="w-6 h-6 rounded-full bg-[#F5D89A] flex items-center justify-center text-[#6B5344] text-xs font-bold shadow-sm">
                       6
                     </span>
-                    <span className="text-[#E8A4B8] font-bold">$0.42</span>
+                    <span className="text-[#D4A853] font-bold">$0.42</span>
                     <span className="text-[#6B5344]">FireFox2024</span>
                   </div>
-                  <div className="flex items-center gap-2 text-sm bg-white/70 px-3 py-2 rounded-full border border-[#E8DCC8]">
-                    <span className="w-6 h-6 rounded-full bg-[#F5D89A] flex items-center justify-center text-[#8B7355] text-xs font-bold shadow-sm">
+                  <div className="flex items-center gap-2 text-sm bg-white/70 px-3 py-2 rounded-full border border-[#F5ECD7]">
+                    <span className="w-6 h-6 rounded-full bg-[#E8C987] flex items-center justify-center text-[#6B5344] text-xs font-bold shadow-sm">
                       1
                     </span>
-                    <span className="text-[#C4A574] font-bold">$1.25</span>
+                    <span className="text-[#C9A86C] font-bold">$1.25</span>
                     <span className="text-[#6B5344]">StreamWatcher</span>
                   </div>
                 </div>
@@ -268,15 +268,15 @@ export default function Page() {
                     .filter((m) => m.message)
                     .map((msg) => (
                       <div key={msg.id} className="space-y-1">
-                        <span className={`text-sm font-bold ${msg.isNyako ? "text-[#E8A4B8]" : "text-[#6B5344]"}`}>
-                          {msg.isNyako && <span className="inline-block w-4 h-4 rounded-full bg-[#E8A4B8] mr-1 border border-[#D893A7]"></span>}
+                        <span className={`text-sm font-bold ${msg.isNyako ? "text-[#D4A853]" : "text-[#6B5344]"}`}>
+                          {msg.isNyako && <span className="inline-block w-4 h-4 rounded-full bg-[#F5D89A] mr-1 border border-[#D4A853]"></span>}
                           {msg.user}
                         </span>
                         <p
                           className={`text-sm px-4 py-2 rounded-2xl shadow-sm ${
                             msg.isNyako 
-                              ? "bg-[#E8A4B8] text-white font-medium border-2 border-[#D893A7]" 
-                              : "bg-[#FDF6E3] text-[#6B5344] border-2 border-[#E8DCC8]"
+                              ? "bg-[#F5D89A] text-[#6B5344] font-medium border-2 border-[#D4A853]" 
+                              : "bg-[#FFF8E7] text-[#6B5344] border-2 border-[#F5ECD7]"
                           }`}
                         >
                           {msg.message}
@@ -286,12 +286,12 @@ export default function Page() {
                 </div>
 
                 {/* Connect Wallet */}
-                <div className="p-4 border-t-2 border-[#E8DCC8] bg-[#FDF6E3]">
+                <div className="p-4 border-t-2 border-[#F5ECD7] bg-[#FFF8E7]">
                   <p className="text-sm font-bold text-[#6B5344] mb-1">Connect wallet to chat</p>
                   <p className="text-xs text-[#A89078] mb-3">
                     Chat with <Lock className="w-3 h-3 inline" /> Nyako
                   </p>
-                  <Button className="w-full bg-[#E8A4B8] hover:bg-[#D893A7] text-white font-bold rounded-full border-2 border-[#D893A7] shadow-md">
+                  <Button className="w-full bg-[#F5D89A] hover:bg-[#E8C987] text-[#6B5344] font-bold rounded-full border-2 border-[#D4A853] shadow-md">
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Connect
                   </Button>
@@ -303,20 +303,20 @@ export default function Page() {
           {/* Info Section Below */}
           <div className="mt-10 relative">
             {/* Kawaii frame wrapper for info */}
-            <div className="absolute -inset-3 bg-[#C4A574] rounded-[2rem] border-4 border-[#8B7355]" />
-            <div className="absolute -inset-1 bg-[#FDF6E3] rounded-[1.5rem] border-2 border-[#C4A574]" 
+            <div className="absolute -inset-3 bg-[#E8D4A8] rounded-[2rem] border-4 border-[#C9A86C]" />
+            <div className="absolute -inset-1 bg-[#FFF8E7] rounded-[1.5rem] border-2 border-[#E8D4A8]" 
                  style={{ borderStyle: 'dashed' }} 
             />
             
-            <div className="relative p-8 rounded-2xl border-2 border-[#C4A574] bg-[#FFFEF9] shadow-lg">
+            <div className="relative p-8 rounded-2xl border-2 border-[#E8D4A8] bg-[#FFFEF9] shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_auto_auto] gap-8 items-start">
                 {/* Column 1: Name, Description, Link */}
                 <div className="space-y-4">
                   <div>
-                    <div className="mb-2 p-3 bg-[#FDF6E3] rounded-2xl border-2 border-[#E8DCC8] inline-block">
+                    <div className="mb-2 p-3 bg-[#FFF8E7] rounded-2xl border-2 border-[#F5ECD7] inline-block">
                       <NyakoVideo width={128} height={96} />
                     </div>
-                    <span className="inline-block mt-2 px-4 py-1 text-sm font-bold bg-[#E8A4B8] rounded-full border-2 border-[#D893A7] text-white shadow-sm">
+                    <span className="inline-block mt-2 px-4 py-1 text-sm font-bold bg-[#F5D89A] rounded-full border-2 border-[#D4A853] text-[#6B5344] shadow-sm">
                       AI
                     </span>
                   </div>
@@ -329,14 +329,14 @@ export default function Page() {
                     </p>
                     <button
                       onClick={() => setShowMore(!showMore)}
-                      className="text-[#E8A4B8] hover:text-[#D893A7] mt-2 text-base font-bold"
+                      className="text-[#D4A853] hover:text-[#C9A86C] mt-2 text-base font-bold"
                     >
                       {showMore ? "Show Less" : "Show More"}
                     </button>
                   </div>
                   <a
                     href="#"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#FDF6E3] border-2 border-[#E8DCC8] rounded-full hover:border-[#E8A4B8] transition-colors text-base text-[#6B5344] shadow-sm"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFF8E7] border-2 border-[#F5ECD7] rounded-full hover:border-[#D4A853] transition-colors text-base text-[#6B5344] shadow-sm"
                   >
                     <span>https://nyako.ai</span>
                     <ExternalLink className="w-4 h-4" />
@@ -347,7 +347,7 @@ export default function Page() {
                 <div className="space-y-5">
                   {/* Contract & Wallet */}
                   <div className="flex gap-6">
-                    <div className="bg-[#FDF6E3] p-3 rounded-xl border-2 border-[#E8DCC8]">
+                    <div className="bg-[#FFF8E7] p-3 rounded-xl border-2 border-[#F5ECD7]">
                       <div className="flex items-center gap-2 text-xs text-[#A89078] mb-1 font-bold">
                         <span>CONTRACT</span>
                         <ExternalLink className="w-3 h-3" />
@@ -361,7 +361,7 @@ export default function Page() {
                       </div>
                       <p className="text-sm font-mono text-[#6B5344]">0xNYAK0...F1R3</p>
                     </div>
-                    <div className="bg-[#FDF6E3] p-3 rounded-xl border-2 border-[#E8DCC8]">
+                    <div className="bg-[#FFF8E7] p-3 rounded-xl border-2 border-[#F5ECD7]">
                       <div className="flex items-center gap-2 text-xs text-[#A89078] mb-1 font-bold">
                         <span>WALLET</span>
                         <ExternalLink className="w-3 h-3" />
@@ -378,17 +378,17 @@ export default function Page() {
                   </div>
 
                   {/* Stats */}
-                  <div className="flex gap-6 pt-4 border-t-2 border-[#E8DCC8]">
-                    <div className="bg-[#FDF6E3] p-3 rounded-xl border-2 border-[#E8DCC8]">
+                  <div className="flex gap-6 pt-4 border-t-2 border-[#F5ECD7]">
+                    <div className="bg-[#FFF8E7] p-3 rounded-xl border-2 border-[#F5ECD7]">
                       <p className="text-xs text-[#A89078] font-bold">MARKET CAP</p>
                       <p className="text-xl font-bold text-[#6B5344]">$742,891</p>
-                      <p className="text-xs text-[#E8A4B8]">-0.00%</p>
+                      <p className="text-xs text-[#D4A853]">-0.00%</p>
                     </div>
-                    <div className="bg-[#FDF6E3] p-3 rounded-xl border-2 border-[#E8DCC8]">
+                    <div className="bg-[#FFF8E7] p-3 rounded-xl border-2 border-[#F5ECD7]">
                       <p className="text-xs text-[#A89078] font-bold">TOTAL VOLUME</p>
                       <p className="text-xl font-bold text-[#6B5344]">$583,204</p>
                     </div>
-                    <div className="bg-[#FDF6E3] p-3 rounded-xl border-2 border-[#E8DCC8]">
+                    <div className="bg-[#FFF8E7] p-3 rounded-xl border-2 border-[#F5ECD7]">
                       <p className="text-xs text-[#A89078] font-bold">SUBSCRIBERS</p>
                       <p className="text-xl font-bold text-[#6B5344]">128</p>
                     </div>
@@ -399,16 +399,16 @@ export default function Page() {
                 <div className="space-y-3 min-w-[200px]">
                   <div className="flex items-center justify-between">
                     <span className="text-base text-[#A89078] font-bold">TRADE</span>
-                    <Info className="w-5 h-5 text-[#C4A574]" />
+                    <Info className="w-5 h-5 text-[#D4A853]" />
                   </div>
                   <div className="flex gap-3">
-                    <Button className="bg-[#E8A4B8] hover:bg-[#D893A7] text-white font-bold text-base px-6 py-2.5 rounded-full border-2 border-[#D893A7] shadow-md">
+                    <Button className="bg-[#F5D89A] hover:bg-[#E8C987] text-[#6B5344] font-bold text-base px-6 py-2.5 rounded-full border-2 border-[#D4A853] shadow-md">
                       <Heart className="w-5 h-5 mr-2 fill-current" />
                       BUY
                     </Button>
                     <Button
                       variant="outline"
-                      className="border-2 border-[#C4A574] hover:border-[#8B7355] font-bold bg-[#FDF6E3] text-[#6B5344] text-base px-6 py-2.5 rounded-full shadow-md"
+                      className="border-2 border-[#E8D4A8] hover:border-[#C9A86C] font-bold bg-[#FFF8E7] text-[#6B5344] text-base px-6 py-2.5 rounded-full shadow-md"
                     >
                       <Minus className="w-5 h-5 mr-2" />
                       SELL
@@ -420,14 +420,14 @@ export default function Page() {
                 <div className="space-y-3 min-w-[200px]">
                   <div className="flex items-center justify-between">
                     <span className="text-base text-[#A89078] font-bold">SUBSCRIBE</span>
-                    <Info className="w-5 h-5 text-[#C4A574]" />
+                    <Info className="w-5 h-5 text-[#D4A853]" />
                   </div>
                   <div className="flex gap-3">
-                    <Button className="bg-[#F5D89A] hover:bg-[#E8C987] text-[#6B5344] font-bold border-2 border-[#E8C987] text-base px-6 py-2.5 rounded-full shadow-md">
+                    <Button className="bg-[#E8C987] hover:bg-[#D4A853] text-[#6B5344] font-bold border-2 border-[#C9A86C] text-base px-6 py-2.5 rounded-full shadow-md">
                       <Lock className="w-5 h-5 mr-2" />
                       SUB
                     </Button>
-                    <Button variant="ghost" className="text-[#C4A574] font-bold text-base px-6 py-2.5 rounded-full" disabled>
+                    <Button variant="ghost" className="text-[#C9A86C] font-bold text-base px-6 py-2.5 rounded-full" disabled>
                       <Lock className="w-5 h-5 mr-2" />
                       UNSUB
                     </Button>

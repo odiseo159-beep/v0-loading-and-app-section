@@ -171,7 +171,7 @@
   }
   body {
     @apply text-foreground;
-    background-color: #FDF6E3; /* Changed background to cream kawaii color */
+    background-color: #FFF8E7; /* Warm yellow kawaii color */
   }
   .hide-scrollbar {
     scrollbar-width: none;
