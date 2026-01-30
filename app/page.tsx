@@ -60,13 +60,24 @@ export default function Page() {
   if (isLoading) {
     return (
       <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#FDF6E3]">
-        <video autoPlay loop muted playsInline className="w-64 h-auto">
-          <source
-            src="/images/cat-walk-cycle-animation-1.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <h2 className="mt-8 text-4xl font-bold tracking-wider text-[#8B7355]">LOADING</h2>
+        {/* Kawaii loading frame */}
+        <div className="relative">
+          <div className="absolute -inset-4 bg-[#C4A574] rounded-[2rem] border-4 border-[#8B7355]" />
+          <div className="absolute -inset-2 bg-[#FDF6E3] rounded-[1.5rem] border-2 border-[#C4A574]" style={{ borderStyle: 'dashed' }} />
+          <div className="relative bg-white px-12 py-8 rounded-2xl border-2 border-[#C4A574] shadow-lg">
+            {/* Animated dots */}
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-4 h-4 rounded-full bg-[#E8A4B8] animate-bounce" style={{ animationDelay: '0ms' }} />
+              <div className="w-4 h-4 rounded-full bg-[#F5D89A] animate-bounce" style={{ animationDelay: '150ms' }} />
+              <div className="w-4 h-4 rounded-full bg-[#C4A574] animate-bounce" style={{ animationDelay: '300ms' }} />
+            </div>
+            <h2 className="text-3xl font-bold tracking-wider text-[#8B7355] text-center">Loading...</h2>
+          </div>
+        </div>
+        {/* Decorative hearts */}
+        <div className="absolute top-1/4 left-1/4 text-[#E8A4B8] text-2xl animate-pulse">&#9829;</div>
+        <div className="absolute top-1/3 right-1/4 text-[#F5D89A] text-xl animate-pulse" style={{ animationDelay: '200ms' }}>&#9829;</div>
+        <div className="absolute bottom-1/3 left-1/3 text-[#C4A574] text-lg animate-pulse" style={{ animationDelay: '400ms' }}>&#9829;</div>
       </div>
     )
   }
