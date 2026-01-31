@@ -1,27 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import LoadingScreen from "@/components/loading-screen"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-
-const _impact = localFont({
-  src: "../public/fonts/impact.ttf",
-  variable: "--font-impact",
+const geistSans = Geist({ 
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
 })
-
-const _msyi = localFont({
-  src: "../public/fonts/msyi.ttf",
-  variable: "--font-msyi",
-})
-
-const _roboto = localFont({
-  src: "../public/fonts/Roboto-Regular.ttf",
-  variable: "--font-roboto",
+const geistMono = Geist_Mono({ 
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
 })
 
 export const metadata: Metadata = {
@@ -54,8 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`font-sans antialiased ${_impact.variable} ${_msyi.variable} ${_roboto.variable}`}>
-        <LoadingScreen />
+      <body className={`font-sans antialiased ${geistSans.variable} ${geistMono.variable}`}>
         {children}
         <Analytics />
       </body>
